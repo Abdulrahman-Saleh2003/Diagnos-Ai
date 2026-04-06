@@ -26,6 +26,7 @@ class OnboardingScreen extends ConsumerWidget {
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.onPageChanged,
+            physics: const NeverScrollableScrollPhysics(),
             children: const [
               OnboardingPage1(),
               OnboardingPage2(),
@@ -39,6 +40,12 @@ class OnboardingScreen extends ConsumerWidget {
     );
   }
 }
+
+
+
+
+
+
 
 // Positioned(
 //   bottom: 30,

@@ -5,6 +5,7 @@ import 'package:diagnos_ai/OnBoarding/View/onboarding4/onboarding_page4.dart';
 import 'package:diagnos_ai/OnBoarding/View/onboarding.dart';
 import 'package:diagnos_ai/screens/Authentication/LogIn/login_screen.dart';
 import 'package:diagnos_ai/screens/Authentication/LogIn/test.dart';
+import 'package:diagnos_ai/screens/Authentication/SignUp/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -29,7 +30,18 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const LoginScreen(),
       // builder: (context, state) => const LoginLabScreen(),
 
-    ),GoRoute(
+    ),
+
+    GoRoute(
+      path: '/PatientRegistrationScreen',
+      builder: (context, state) => const PatientRegistrationScreen(),
+      // builder: (context, state) => const LoginLabScreen(),
+
+    ),
+
+
+
+    GoRoute(
       path: '/LabDashboardPage',
       builder: (context, state) => const OnboardingScreen(),
 

@@ -2,8 +2,10 @@ import 'package:diagnos_ai/OnBoarding/View/widget.dart';
 
 
 
+
 class OnboardingPage2 extends StatelessWidget {
   const OnboardingPage2({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,16 +58,20 @@ class OnboardingPage2 extends StatelessWidget {
 
           const SizedBox(height: 40),
 
+
+
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                'Active Clinical Streams',
-                style: TextStyle(
+              Expanded(
+                child: Text(
+                  'Active Clinical Streams',
+                  style: TextStyle(
                     fontFamily: 'SpaceGrotesk',
                     fontSize: 16,
-                    fontWeight: FontWeight.bold
-                    ,color: Colors.white
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
               TextButton.icon(

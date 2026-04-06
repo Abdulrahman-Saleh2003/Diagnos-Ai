@@ -1,9 +1,9 @@
 
+import 'package:diagnos_ai/OnBoarding/View/widget.dart';
 import 'package:diagnos_ai/screens/Authentication/LogIn/build_logo_section.dart';
 import 'package:diagnos_ai/screens/Authentication/LogIn/custom_input_field.dart';
 import 'package:diagnos_ai/screens/Authentication/LogIn/custom_phone_field.dart';
 import 'package:flutter/material.dart';
-import 'package:country_code_picker/country_code_picker.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -144,14 +144,8 @@ class _LoginScreenState extends State<LoginScreen> {
         return null;
       },
     )
-            // _buildInputField(
-            //   label: 'Email Address',
-            //   hint: 'example@labsync.com',
-            //   icon: Icons.email_outlined,
-            //   controller: _emailController,
-            // )
+
           else
-            // _buildPhoneField(),
 
           CustomPhoneField(
             controller: _phoneController,
@@ -174,14 +168,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
           const SizedBox(height: 24),
 
-          // _buildPasswordField(),
-          // _buildInputField(
-          //   label: 'Access Cipher',
-          //   hint: '••••••••••••',
-          //   icon: Icons.lock_outline,
-          //   isPassword: true,           // ← هذا هو المهم
-          //   controller: _passwordController,
-          // ),
 
           CustomInputField(
             label: 'Access Cipher',
@@ -236,14 +222,25 @@ class _LoginScreenState extends State<LoginScreen> {
 
           const SizedBox(height: 24),
 
-          Center(
-            child: RichText(
-              text: const TextSpan(
-                style: TextStyle(fontSize: 13, color: Colors.grey),
-                children: [
-                  TextSpan(text: "Don't have an account? ",style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold,wordSpacing: 1,fontSize: 14),),
-                  TextSpan(text: 'Sign Up', style: TextStyle(color: Color(0xFF00D2FF), fontWeight: FontWeight.bold,fontSize: 14)),
-                ],
+          GestureDetector(
+            onTap: () {
+
+              context.go('/PatientRegistrationScreen');
+
+            },
+
+
+
+            child: Center(
+              child: RichText(
+
+                text: const TextSpan(
+                  style: TextStyle(fontSize: 13, color: Colors.grey),
+                  children: [
+                    TextSpan(text: "Don't have an account? ",style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold,wordSpacing: 1,fontSize: 14),),
+                    TextSpan(text: 'Sign Up', style: TextStyle(color: Color(0xFF00D2FF), fontWeight: FontWeight.bold,fontSize: 14)),
+                  ],
+                ),
               ),
             ),
           ),

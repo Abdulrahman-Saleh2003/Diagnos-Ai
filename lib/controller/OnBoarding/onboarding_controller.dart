@@ -11,7 +11,7 @@ class OnboardingController extends Notifier<OnboardingState> {
   OnboardingState build() {
     pageController = PageController();
 
-    startAutoSlide();
+    // startAutoSlide();
 
     ref.onDispose(() {
       _timer?.cancel();
@@ -35,7 +35,10 @@ class OnboardingController extends Notifier<OnboardingState> {
         curve: Curves.easeInOut,
       );
     } else {
-      // navigation
+
+      state = state.copyWith(goToLogin: true);
+
+
     }
   }
 

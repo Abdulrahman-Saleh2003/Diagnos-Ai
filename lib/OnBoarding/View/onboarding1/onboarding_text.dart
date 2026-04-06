@@ -5,6 +5,8 @@ Widget   onboardingText(
     {
       required String label,
       required TextStyle? style,
+      int maxLines=2,
+
 
     }
 
@@ -13,8 +15,10 @@ Widget   onboardingText(
   return
 
     Text(
-      label,style:style ,
+      label,style:style ,                  overflow: TextOverflow.ellipsis,
+maxLines: maxLines,
 
     );
+
 
 }

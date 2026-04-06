@@ -16,15 +16,17 @@ class OnboardingPage1 extends StatelessWidget {
 
           const SizedBox(height: 8),
           onboardingText(
-
+maxLines: 3,
 
             label:
             'Track your samples in real-time and get instant updates on your test results.',
             style: TextStyle(
+
               fontSize: 16,
               color: Colors.grey[400],
               height: 1.5,
             ),
+
           ),
           const SizedBox(height: 32),
 
@@ -44,7 +46,7 @@ class OnboardingPage1 extends StatelessWidget {
             ],
           ),
 
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
 
            BuildTotalSamplesCard(),
 
