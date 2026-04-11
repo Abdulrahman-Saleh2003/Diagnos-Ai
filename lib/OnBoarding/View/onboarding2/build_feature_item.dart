@@ -31,7 +31,7 @@ class BuildFeatureItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title, style: const TextStyle(
-                    color:const Color(0xFF00D2FF) ,
+                    color: Color(0xFF00D2FF) ,
                     fontSize: 18, fontWeight: FontWeight.bold),),
                 const SizedBox(height: 8),
                 Text(desc, style: const TextStyle(color: Colors.grey, height: 1.5)),

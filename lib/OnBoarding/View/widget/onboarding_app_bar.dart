@@ -27,12 +27,15 @@ class OnboardingAppBar extends StatelessWidget implements PreferredSizeWidget {
             const SizedBox(width: 10),
             const Text(
               'LAB_SYS v1.0',
+              maxLines: 1,
               style: TextStyle(
                 fontFamily: 'SpaceGrotesk',
                 fontWeight: FontWeight.bold,
-                letterSpacing: 2.5,
+                letterSpacing: 2,
                 color: Color(0xFF00D2FF),
-                fontSize: 18,
+                fontSize: 16,
+                overflow: TextOverflow.ellipsis
+                  ,
               ),
             ),
           ],

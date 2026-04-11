@@ -1,3 +1,4 @@
+import 'package:diagnos_ai/core/constant/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 class CustomPhoneField extends StatelessWidget {
@@ -25,7 +26,7 @@ class CustomPhoneField extends StatelessWidget {
             fontSize: 12,
             fontWeight: FontWeight.w600,
             letterSpacing: 1,
-            color: Colors.white,
+            color: AppMyColor.whiteApp,
           ),
         ),
         const SizedBox(height: 8),
@@ -46,19 +47,19 @@ class CustomPhoneField extends StatelessWidget {
                 showCountryOnly: false,
                 showOnlyCountryWhenClosed: false,
                 alignLeft: false,
-                textStyle: const TextStyle(color: Colors.white),
-                dialogTextStyle: const TextStyle(color: Colors.white),
+                textStyle: const TextStyle(color: AppMyColor.whiteApp),
+                dialogTextStyle: const TextStyle(color: AppMyColor.whiteApp),
               ),
 
               Expanded(
                 child: TextFormField(
                   controller: controller,
                   keyboardType: TextInputType.phone,
-                  style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(color: AppMyColor.whiteApp),
                   validator: validator,
                   decoration: const InputDecoration(
                     hintText: '501234567',
-                    hintStyle: TextStyle(color: Colors.grey),
+                    hintStyle: TextStyle(color: AppMyColor.greyApp),
                     border: InputBorder.none,
                     contentPadding:
                     EdgeInsets.symmetric(vertical: 16),

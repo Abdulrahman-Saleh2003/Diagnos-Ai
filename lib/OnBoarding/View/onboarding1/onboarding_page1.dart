@@ -6,12 +6,13 @@ class OnboardingPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 100),
+      // padding: const EdgeInsets.fromLTRB(16, 8, 16, 100),
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 120), // زيادة padding من الأسفل
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           onboardingText(label: 'Sample and Results',
-              style: TextStyle(fontFamily: 'SpaceGrotesk', fontSize: 42, fontWeight: FontWeight.bold, color: Colors.white)
+              style: TextStyle(fontFamily: 'SpaceGrotesk', fontSize: 34, fontWeight: FontWeight.bold, color: Colors.white)
           ),
 
           const SizedBox(height: 8),
@@ -38,7 +39,8 @@ maxLines: 3,
               crossAxisCount: 1,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              childAspectRatio: 0.90,
+              childAspectRatio: 0.94,
+
             ),
             children: [
                BuildLiveFeedCard(),
@@ -72,5 +74,6 @@ maxLines: 3,
   }
 
 }
+
 
 

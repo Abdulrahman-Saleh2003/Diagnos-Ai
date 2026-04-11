@@ -20,7 +20,7 @@ class BuildSampleJourney extends StatelessWidget {
               fontSize: 14,
               fontWeight: FontWeight.bold,
               letterSpacing: 2,
-              color: Colors.grey,
+              color: Colors.white,
             ),
           ),
           const SizedBox(height: 40),

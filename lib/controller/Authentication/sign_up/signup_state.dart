@@ -1,63 +1,43 @@
 // lib/features/auth/signup/signup_state.dart
 enum SignUpStatus { initial, loading, success, error }
 
-class SignUpState {
+
+class PatientRegistrationState {
+
+
+  // final String countryCode;
+  // final bool isPasswordVisible;
+  // final String gender;
+
   final SignUpStatus status;
-  final String? errorMessage;
-  final bool isTermsAccepted;
 
-  final String name;
-  final String age;
-  final String weight;
-  final String phone;
-  final String password;
-  final String confirmPassword;
+  final String selectedGender;
+  final double weight;
+  final bool isLoading;
+  final bool registrationSuccess;
 
-  const SignUpState({
+  const PatientRegistrationState({
     this.status = SignUpStatus.initial,
-    this.errorMessage,
-    this.isTermsAccepted = false,
-    this.name = '',
-    this.age = '',
-    this.weight = '',
-    this.phone = '',
-    this.password = '',
-    this.confirmPassword = '',
+
+    this.selectedGender = 'Male',
+    this.weight = 75.0,
+    this.isLoading = false,
+    this.registrationSuccess = false,
   });
 
-  SignUpState copyWith({
+  PatientRegistrationState copyWith({
     SignUpStatus? status,
-    String? errorMessage,
-    bool? isTermsAccepted,
-    String? name,
-    String? age,
-    String? weight,
-    String? phone,
-    String? password,
-    String? confirmPassword,
+
+    String? selectedGender,
+    double? weight,
+    bool? isLoading,
+    bool? registrationSuccess,
   }) {
-    return SignUpState(
-      status: status ?? this.status,
-      errorMessage: errorMessage ?? this.errorMessage,
-      isTermsAccepted: isTermsAccepted ?? this.isTermsAccepted,
-      name: name ?? this.name,
-      age: age ?? this.age,
+    return PatientRegistrationState(
+      selectedGender: selectedGender ?? this.selectedGender,
       weight: weight ?? this.weight,
-      phone: phone ?? this.phone,
-      password: password ?? this.password,
-      confirmPassword: confirmPassword ?? this.confirmPassword,
+      isLoading: isLoading ?? this.isLoading,
+      registrationSuccess: registrationSuccess ?? this.registrationSuccess,
     );
   }
-
-  bool get isFormValid =>
-      name.trim().isNotEmpty &&
-          age.trim().isNotEmpty &&
-          weight.trim().isNotEmpty &&
-          phone.trim().length >= 9 &&
-          password.length >= 6 &&
-          password == confirmPassword &&
-          isTermsAccepted;
-
-
-
 }

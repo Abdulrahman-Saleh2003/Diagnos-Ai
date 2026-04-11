@@ -20,8 +20,11 @@ class BuildVitalityMetrics extends StatelessWidget {
             'VITALITY METRICS',
             style: TextStyle(
               fontSize: 22,
+              color: Colors.white,
               fontWeight: FontWeight.bold,
               fontFamily: 'SpaceGrotesk',
+                overflow: TextOverflow.ellipsis
+
             ),
           ),
           const SizedBox(height: 4),
@@ -31,7 +34,7 @@ class BuildVitalityMetrics extends StatelessWidget {
           ),
 
           const SizedBox(height: 28),
-
+// m
           // Legend
           Row(
             children: [

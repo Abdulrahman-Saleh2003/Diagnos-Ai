@@ -30,7 +30,7 @@ class OnboardingController extends Notifier<OnboardingState> {
   void nextPage() {
     if (state.currentPage < 3) {
       pageController.nextPage(
-        duration: const Duration(seconds :2,),
+        duration: const Duration(milliseconds: 400),
         // milliseconds: 400
         curve: Curves.easeInOut,
       );

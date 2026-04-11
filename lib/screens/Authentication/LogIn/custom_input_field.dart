@@ -1,3 +1,4 @@
+import 'package:diagnos_ai/core/constant/app_color.dart';
 import 'package:flutter/material.dart';
 
 class CustomInputField extends StatelessWidget {
@@ -33,7 +34,7 @@ class CustomInputField extends StatelessWidget {
             fontSize: 12,
             fontWeight: FontWeight.w600,
             letterSpacing: 1,
-            color: Colors.white,
+            color: AppMyColor.whiteApp,
           ),
         ),
         const SizedBox(height: 8),
@@ -45,12 +46,12 @@ class CustomInputField extends StatelessWidget {
           child: TextFormField(
             controller: controller,
             obscureText: isPassword && !isPasswordVisible,
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(color: AppMyColor.whiteApp),
             validator: validator,
             decoration: InputDecoration(
               hintText: hint,
-              hintStyle: const TextStyle(color: Colors.grey),
-              prefixIcon: Icon(icon, color: Colors.grey),
+              hintStyle: const TextStyle(color: AppMyColor.greyApp),
+              prefixIcon: Icon(icon, color: AppMyColor.greyApp),
 
               suffixIcon: isPassword
                   ? IconButton(
@@ -69,25 +70,25 @@ class CustomInputField extends StatelessWidget {
 
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
-                borderSide: const BorderSide(color: Colors.white, width: 1),
+                borderSide: const BorderSide(color: AppMyColor.whiteApp, width: 1),
               ),
 
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide:
-                const BorderSide(color: Color(0xFF00D2FF), width: 1.8),
+                const BorderSide(color: AppMyColor.blueColor, width: 1.8),
               ),
 
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide:
-                const BorderSide(color: Colors.red, width: 1.8),
+                const BorderSide(color: AppMyColor.redApp, width: 1.8),
               ),
 
               focusedErrorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide:
-                const BorderSide(color: Colors.red, width: 1.8),
+                const BorderSide(color: AppMyColor.redApp, width: 1.8),
               ),
 
               contentPadding:

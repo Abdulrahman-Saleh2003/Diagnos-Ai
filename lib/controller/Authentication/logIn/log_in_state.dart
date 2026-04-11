@@ -1,38 +1,32 @@
 
-class LogInState {
-  final String phone;
-  final String password;
-  final bool isObscure;
+class LoginState {
+  final String selectedType;
+  final String countryCode;
+  final bool isPasswordVisible;
   final bool isLoading;
-  final String? errorMessage;
-  final bool isSuccess;
+  final bool loginSuccess;
 
-  const LogInState({
-    this.phone = '',
-    this.password = '',
-    this.isObscure = true,
+  const LoginState({
+    this.selectedType = 'email',
+    this.countryCode = '+966',
+    this.isPasswordVisible = true,
     this.isLoading = false,
-    this.errorMessage,
-    this.isSuccess = false,
+    this.loginSuccess = false,
   });
 
-  LogInState copyWith({
-    String? phone,
-    String? password,
-    bool? isObscure,
+  LoginState copyWith({
+    String? selectedType,
+    String? countryCode,
+    bool? isPasswordVisible,
     bool? isLoading,
-    String? errorMessage,
-    bool? isSuccess,
+    bool? loginSuccess,
   }) {
-    return LogInState(
-      phone: phone ?? this.phone,
-      password: password ?? this.password,
-      isObscure: isObscure ?? this.isObscure,
+    return LoginState(
+      selectedType: selectedType ?? this.selectedType,
+      countryCode: countryCode ?? this.countryCode,
+      isPasswordVisible: isPasswordVisible ?? this.isPasswordVisible,
       isLoading: isLoading ?? this.isLoading,
-      errorMessage: errorMessage,
-      isSuccess: isSuccess ?? this.isSuccess,
+      loginSuccess: loginSuccess ?? this.loginSuccess,
     );
   }
-
-  bool get isFormValid => phone.trim().length >= 9 && password.trim().isNotEmpty;
 }

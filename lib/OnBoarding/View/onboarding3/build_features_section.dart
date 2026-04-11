@@ -1,19 +1,22 @@
-import 'package:diagnos_ai/OnBoarding/View/widget.dart';
 
+import 'package:diagnos_ai/OnBoarding/View/widget.dart';
 
 class BuildFeaturesSection extends StatelessWidget {
   const BuildFeaturesSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+    final scale = size.width / 375;
+
     return Column(
       children: [
-        // Molecular Tracking (Large Card)
+        // 🔥 Molecular Tracking Card
         Container(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24 * scale),
           decoration: BoxDecoration(
             color: const Color(0xFF1A1C1F),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20 * scale),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,49 +25,81 @@ class BuildFeaturesSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(14),
+                    padding: EdgeInsets.all(14 * scale),
                     decoration: BoxDecoration(
                       color: const Color(0xFF00D2FF).withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12 * scale),
                     ),
-                    child: const Icon(Icons.bubble_chart, color: Color(0xFF00D2FF), size: 36),
+                    child: Icon(
+                      Icons.bubble_chart,
+                      color: const Color(0xFF00D2FF),
+                      size: 36 * scale,
+                    ),
                   ),
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
-                      Text('0.02μ', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xFF00D2FF))),
-                      Text('Precision Range', style: TextStyle(fontSize: 12, color: Colors.white,)),
+                    children: [
+                      Text(
+                        '0.02μ',
+                        style: TextStyle(
+                          fontSize: 28 * scale,
+                          fontWeight: FontWeight.bold,
+                          color: const Color(0xFF00D2FF),
+                        ),
+                      ),
+                      Text(
+                        'Precision Range',
+                        style: TextStyle(
+                          fontSize: 12 * scale,
+                          color: Colors.white,
+                        ),
+                      ),
                     ],
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
-              const Text(
+
+              SizedBox(height: 20 * scale),
+
+              Text(
                 'Molecular Tracking',
-                style: TextStyle(fontSize: 22, color: Colors.white,fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 22 * scale,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              const SizedBox(height: 8),
-              const Text(
+
+              SizedBox(height: 8 * scale),
+
+              Text(
                 'Deep-level sequence monitoring to detect subtle changes in biological markers over time.',
-                style: TextStyle(color: Colors.grey, height: 1.5),
+                style: TextStyle(
+                  color: Colors.grey,
+                  height: 1.5,
+                  fontSize: 14 * scale,
+                ),
               ),
-              const SizedBox(height: 20),
-              // Mini Bar Chart
+
+              SizedBox(height: 20 * scale),
+
+              // 📊 Mini Bar Chart
               Container(
-                height: 80,
+                height: 80 * scale,
                 decoration: BoxDecoration(
                   color: const Color(0xFF111317),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12 * scale),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [
-                    MiniBar(height: 35),
-                    MiniBar(height: 55),
-                    MiniBar(height: 80, isHighlighted: true),
-                    MiniBar(height: 50),
-                    MiniBar(height: 40),
+                  children: [
+                    MiniBar(height: 35 * scale),
+                    MiniBar(height: 55 * scale),
+                    MiniBar(height: 80 * scale, isHighlighted: true),
+                    MiniBar(height: 50 * scale),
+                    MiniBar(height: 40 * scale),
                   ],
                 ),
               ),
@@ -72,40 +107,65 @@ class BuildFeaturesSection extends StatelessWidget {
           ),
         ),
 
-        const SizedBox(height: 16),
+        SizedBox(height: 16 * scale),
 
-        // Smart Alerts Card
+        // 🔔 Smart Alerts Card
         Container(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24 * scale),
           decoration: BoxDecoration(
             color: const Color(0xFF1A1C1F),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20 * scale),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: EdgeInsets.all(12 * scale),
                 decoration: BoxDecoration(
                   color: const Color(0xFFEDB1FF).withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12 * scale),
                 ),
-                child: const Icon(Icons.notifications_active, color: Color(0xFFEDB1FF), size: 32),
+                child: Icon(
+                  Icons.notifications_active,
+                  color: const Color(0xFFEDB1FF),
+                  size: 32 * scale,
+                ),
               ),
-              const SizedBox(height: 16),
-              const Text(
+
+              SizedBox(height: 16 * scale),
+
+              Text(
                 'Smart Alerts',
-                style: TextStyle(fontSize: 22,color: Colors.white, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 22 * scale,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              const SizedBox(height: 8),
-              const Text(
+
+              SizedBox(height: 8 * scale),
+
+              Text(
                 'Instant trend alerts triggered by anomalies in your longitudinal data streams.',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14 * scale,
+                ),
               ),
-              const SizedBox(height: 20),
-              BuildAlertItem(text: 'Critical Shift Detected',isCritical:  true),
-              const SizedBox(height: 8),
-              BuildAlertItem(text: 'Stability Maintained',isCritical:  false),
+
+              SizedBox(height: 20 * scale),
+
+              const BuildAlertItem(
+                text: 'Critical Shift Detected',
+                isCritical: true,
+              ),
+
+              SizedBox(height: 8 * scale),
+
+              const BuildAlertItem(
+                text: 'Stability Maintained',
+                isCritical: false,
+              ),
             ],
           ),
         ),

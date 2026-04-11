@@ -1,75 +1,91 @@
 
 import 'package:diagnos_ai/OnBoarding/View/widget.dart';
-
+import 'package:diagnos_ai/core/constant/app_color.dart';
 
 class OnboardingPage3 extends StatelessWidget {
   const OnboardingPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+    final scale = size.width / 375;
+
     return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 100),
+      padding: EdgeInsets.fromLTRB(
+        16 * scale,
+        8 * scale,
+        16 * scale,
+        100 * scale,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Hero Section
-          const Text(
+          // 🔥 Hero Section
+          Text(
             'AI-Powered',
             style: TextStyle(
               fontFamily: 'SpaceGrotesk',
-              fontSize: 42,
+              fontSize: 42 * scale,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
           ),
-          const Text(
+
+          Text(
             'Analysis',
             style: TextStyle(
               fontFamily: 'SpaceGrotesk',
-              fontSize: 42,
+              fontSize: 42 * scale,
               fontWeight: FontWeight.bold,
-              color: Color(0xFF00D2FF),
+              color: AppMyColor.blueColor,
             ),
           ),
-          const SizedBox(height: 12),
-          const Text(
+
+          SizedBox(height: 12 * scale),
+
+          Text(
             'Our advanced AI analyzes your lab data to provide deep insights and trend alerts with clinical precision.',
-            style: TextStyle(fontSize: 16, color: Colors.grey, height: 1.5),
+            style: TextStyle(
+              fontSize: 16 * scale,
+              color: AppMyColor.greyApp,
+              height: 1.5,
+            ),
           ),
-          const SizedBox(height: 32),
+
+          SizedBox(height: 32 * scale),
+
+          const BuildAiBrainVisualization(),
 
 
-           BuildAiBrainVisualization(),
+          SizedBox(height: 40 * scale),
 
-          const SizedBox(height: 40),
+          const BuildFeaturesSection(),
 
-           BuildFeaturesSection(),
 
-          const SizedBox(height: 40),
 
-          const Text(
+          SizedBox(height: 40 * scale),
+
+          Text(
             'Analysis Stream',
             style: TextStyle(
               fontFamily: 'SpaceGrotesk',
-              fontSize: 24,
+              fontSize: 24 * scale,
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 16),
-          BuildAnalysisStream(),
-          // const SizedBox(height: 10),
 
-          const SizedBox(height: 40),
+          SizedBox(height: 16 * scale),
+
+          const BuildAnalysisStream(),
+
+          SizedBox(height: 40 * scale),
 
           const OnboardingNextButton(),
 
-          const SizedBox(height: 20),
-
+          SizedBox(height: 20 * scale),
         ],
       ),
-
     );
   }
-
 }

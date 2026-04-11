@@ -27,7 +27,7 @@ class BuildMetricChart extends StatelessWidget {
                   TextSpan(
                     text: value,
                     style:  TextStyle(
-                        fontSize: 26,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: color
                     ),
