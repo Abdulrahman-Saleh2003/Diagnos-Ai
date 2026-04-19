@@ -107,7 +107,8 @@ class PatientRegistrationController extends Notifier<PatientRegistrationState> {
   }
 
   void goToHome(BuildContext context){
-    context.go('/HomeScreen');
+    context.go('/Home');
+    // context.go('/HomeScreen');
 
 
   }

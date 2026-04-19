@@ -1,13 +1,10 @@
-// lib/features/auth/signup/signup_state.dart
 enum SignUpStatus { initial, loading, success, error }
 
 
 class PatientRegistrationState {
 
 
-  // final String countryCode;
-  // final bool isPasswordVisible;
-  // final String gender;
+
 
   final SignUpStatus status;
 
