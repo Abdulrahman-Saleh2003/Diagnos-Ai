@@ -15,7 +15,7 @@ class BuildHolographicCenter extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             gradient: RadialGradient(
-              colors: [const Color(0xFF00D2FF).withOpacity(0.25), Colors.transparent],
+              colors: [const Color(0xFF00D2FF).withValues(alpha:0.25), Colors.transparent],
             ),
           ),
         ),
@@ -28,7 +28,7 @@ class BuildHolographicCenter extends StatelessWidget {
             height: 280,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: const Color(0xFF00D2FF).withOpacity(0.25), width: 1.5),
+              border: Border.all(color: const Color(0xFF00D2FF).withValues(alpha:0.25), width: 1.5),
             ),
           ),
         ),
@@ -40,7 +40,7 @@ class BuildHolographicCenter extends StatelessWidget {
             height: 220,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: const Color(0xFFEDB1FF).withOpacity(0.3), width: 1),
+              border: Border.all(color: const Color(0xFFEDB1FF).withValues(alpha:0.3), width: 1),
             ),
           ),
         ),
@@ -55,7 +55,7 @@ class BuildHolographicCenter extends StatelessWidget {
             border: Border.all(color: const Color(0xFF00D2FF), width: 3),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFF00D2FF).withOpacity(0.5),
+                color: const Color(0xFF00D2FF).withValues(alpha: 0.5),
                 blurRadius: 50,
                 spreadRadius: 10,
               ),

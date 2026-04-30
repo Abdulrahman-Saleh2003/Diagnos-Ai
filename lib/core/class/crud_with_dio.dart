@@ -34,11 +34,11 @@ class DioHelper {
     required String endPont,
     required myData,
   }) async {
-
-    print("myPost");
-    print('token is: $token');
-
-    print(AppLinkApi.urlServer +"${endPont}");
+    //
+    // print("myPost");
+    // print('token is: $token');
+    //
+    // print(AppLinkApi.urlServer +"${endPont}");
 
     FormData formData = FormData.fromMap(myData);
     dynamic rul=await dio.post(endPont,

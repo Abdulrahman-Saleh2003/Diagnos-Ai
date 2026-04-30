@@ -38,7 +38,7 @@ final VoidCallback? onTap;
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
                   decoration: TextDecoration.underline,
-                  decorationColor: AppMyColor.blueColor.withOpacity(0.6),
+                  decorationColor: AppMyColor.blueColor.withValues(alpha:0.6),
                   decorationThickness: 1.5,
                 ),
               ),
@@ -82,7 +82,7 @@ class LoginRedirectText extends StatelessWidget {
             onTap: onTap ?? () => context.go('/login'),
 
             borderRadius: BorderRadius.circular(8),
-            splashColor: const Color(0xFF00D2FF).withOpacity(0.2),
+            splashColor: const Color(0xFF00D2FF).withValues(alpha:0.2),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
               child:   AnimatedDefaultTextStyle(

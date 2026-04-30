@@ -16,13 +16,13 @@ class Crud {
     required String linkUrl,
     required Map data,
   }) async {
-    print("Crud0");
+    // print("Crud0");
 
     if (await checkInternet()) {
 
-      print("you have internetr");
+      // print("you have internetr");
       dynamic response=await DioHelper.register(endPont: linkUrl, myData: data);
-      print("response is: ${response.toString()}");
+      // print("response is: ${response.toString()}");
 
 
 
@@ -47,13 +47,13 @@ class Crud {
     required String linkUrl,
     required Map data,
   }) async {
-    print("Crud0");
+    // print("Crud0");
 
     if (await checkInternet()) {
 
-      print("you have internetr");
+      // print("you have internetr");
       dynamic response=await DioHelper.myPost(endPont: linkUrl, myData: data);
-      print("response is: ${response.toString()}");
+      // print("response is: ${response.toString()}");
 
 
 
@@ -172,8 +172,8 @@ class Crud {
           );
 
 
-      print("i in crud in  postRequestWithImageOneDio");
-      print("response is: ${response.toString()}");
+      // print("i in crud in  postRequestWithImageOneDio");
+      // print("response is: ${response.toString()}");
 
 
 

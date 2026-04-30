@@ -37,7 +37,7 @@ class BuildJourneyStep extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: isActive
-                ?  AppMyColor.blueColor.withOpacity(0.2)
+                ?  AppMyColor.blueColor.withValues(alpha:0.2)
                 : Colors.transparent,
             border: Border.all(
               color: color,

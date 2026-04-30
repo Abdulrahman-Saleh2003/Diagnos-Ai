@@ -1,6 +1,5 @@
 import 'package:diagnos_ai/OnBoarding/View/widget.dart';
 import 'package:diagnos_ai/controller/Authentication/sign_up/sign_up_provider.dart';
-import 'package:diagnos_ai/core/constant/app_color.dart';
 import 'package:diagnos_ai/screens/Authentication/SignUp/build_header.dart';
 import 'package:diagnos_ai/screens/Authentication/SignUp/build_weight_slider.dart';
 import 'package:diagnos_ai/screens/Authentication/SignUp/custom_input_field.dart';

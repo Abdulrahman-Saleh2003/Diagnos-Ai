@@ -21,7 +21,7 @@ class HeroSectionWidget extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
-          color: const Color(0xFF00D2FF).withOpacity(0.15),
+          color: const Color(0xFF00D2FF).withValues(alpha:0.15),
         ),
       ),
       child: Column(
@@ -31,7 +31,7 @@ class HeroSectionWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
             decoration: BoxDecoration(
-              color: const Color(0xFF00D2FF).withOpacity(0.1),
+              color: const Color(0xFF00D2FF).withValues(alpha:0.1),
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Text(
@@ -112,7 +112,7 @@ class HeroSectionWidget extends StatelessWidget {
                   height: 160 * scale.clamp(0.9, 1.3),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: const Color(0xFF00D2FF).withOpacity(0.12),
+                    color: const Color(0xFF00D2FF).withValues(alpha:0.12),
                   ),
                 ),
                 // Main Box
@@ -123,7 +123,7 @@ class HeroSectionWidget extends StatelessWidget {
                     color: const Color(0xFF1E2023),
                     borderRadius: BorderRadius.circular(24),
                     border: Border.all(
-                      color: const Color(0xFF00D2FF).withOpacity(0.3),
+                      color: const Color(0xFF00D2FF).withValues(alpha:0.3),
                     ),
                   ),
                   child: const Icon(

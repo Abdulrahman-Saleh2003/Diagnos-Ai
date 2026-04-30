@@ -166,6 +166,11 @@ class BuildBottomNavigationHomeScreen extends StatelessWidget {
               label: 'REPORTS',
               active: currentIndex == 3,
               onTap: () => onTabChanged(3),
+            ),   NavItemHomeScreen(
+              icon: Icons.settings,
+              label: 'settings',
+              active: currentIndex == 4,
+              onTap: () => onTabChanged(4),
             ),
           ],
         ),
@@ -207,7 +212,7 @@ class NavItemHomeScreen extends StatelessWidget {
           Text(
             label,
             style: TextStyle(
-              fontSize: 10,
+              fontSize: 8,
               color: color,
               fontWeight: active ? FontWeight.bold : FontWeight.normal,
             ),

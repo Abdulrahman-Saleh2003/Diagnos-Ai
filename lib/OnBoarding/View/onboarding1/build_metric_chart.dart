@@ -59,12 +59,12 @@ class BuildMetricChart extends StatelessWidget {
                 width: 22,
                 height: height * 4.2, // يمكنك تعديل الـ multiplier
                 decoration: BoxDecoration(
-                  color: isMax ? color : color.withOpacity(0.35),
+                  color: isMax ? color : color.withValues(alpha:0.35),
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(8)),
                   boxShadow: isMax
                       ? [
                     BoxShadow(
-                      color: color.withOpacity(0.6),
+                      color: color.withValues(alpha:0.6),
                       blurRadius: 10,
                       offset: const Offset(0, 2),
                     )

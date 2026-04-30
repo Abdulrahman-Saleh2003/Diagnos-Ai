@@ -32,7 +32,7 @@ class BuildNetworkVisualization extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.7),
+                color: Colors.black.withValues(alpha:0.7),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Row(
@@ -56,9 +56,9 @@ class BuildNetworkVisualization extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.75),
+                color: Colors.black.withValues(alpha:0.75),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: const Color(0xFF00D2FF).withOpacity(0.3)),
+                border: Border.all(color: const Color(0xFF00D2FF).withValues(alpha:0.3)),
               ),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

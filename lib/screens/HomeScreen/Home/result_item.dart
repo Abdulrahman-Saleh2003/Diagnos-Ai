@@ -36,7 +36,7 @@ class ResultItemWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: const Color(0xFF1A1C1F),
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Colors.white.withOpacity(0.05)),
+          border: Border.all(color: Colors.white.withValues(alpha:0.05)),
         ),
         child: Row(
           children: [
@@ -85,7 +85,7 @@ class ResultItemWidget extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(
-                    color: statusColor.withOpacity(0.1),
+                    color: statusColor.withValues(alpha:0.1),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(

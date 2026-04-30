@@ -52,7 +52,7 @@ class OnboardingAppBar extends StatelessWidget implements PreferredSizeWidget {
                 color: const Color(0xFF00D2FF),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withValues(alpha:0.8),
                   width: 1.5,
                 ),
               ),

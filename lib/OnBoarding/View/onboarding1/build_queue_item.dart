@@ -41,8 +41,8 @@ class BuildQueueItem extends StatelessWidget {
             height: isSmallScreen ? 42 : 48,
             decoration: BoxDecoration(
               color: isActive
-                  ? const Color(0xFF00D2FF).withOpacity(0.1)
-                  : Colors.grey.withOpacity(0.1),
+                  ? const Color(0xFF00D2FF).withValues(alpha: 0.1)
+                  : Colors.grey.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(
@@ -92,8 +92,8 @@ class BuildQueueItem extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 color: isActive
-                    ? const Color(0xFF00D2FF).withOpacity(0.2)
-                    : Colors.grey.withOpacity(0.2),
+                    ? const Color(0xFF00D2FF).withValues(alpha:0.2)
+                    : Colors.grey.withValues(alpha:0.2),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
@@ -136,8 +136,8 @@ class BuildQueueItem extends StatelessWidget {
 //             height: 48,
 //             decoration: BoxDecoration(
 //               color: isActive
-//                   ? const Color(0xFF00D2FF).withOpacity(0.1)
-//                   : Colors.grey.withOpacity(0.1),
+//                   ? const Color(0xFF00D2FF).withValues(alpha: 0.1)
+//                   : Colors.grey.withValues(alpha: 0.1),
 //               borderRadius: BorderRadius.circular(10),
 //             ),
 //             child: Icon(
@@ -182,8 +182,8 @@ class BuildQueueItem extends StatelessWidget {
 //               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
 //               decoration: BoxDecoration(
 //                 color: isActive
-//                     ? const Color(0xFF00D2FF).withOpacity(0.2)
-//                     : Colors.grey.withOpacity(0.2),
+//                     ? const Color(0xFF00D2FF).withValues(alpha:0.2)
+//                     : Colors.grey.withValues(alpha:0.2),
 //                 borderRadius: BorderRadius.circular(20),
 //               ),
 //               child: Text(

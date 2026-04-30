@@ -38,7 +38,7 @@ class HealthTrajectoryWidget extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: const Color(0xFF00D2FF).withOpacity(0.1),
+          color: const Color(0xFF00D2FF).withValues(alpha:0.1),
         ),
       ),
       child: Column(
@@ -50,7 +50,7 @@ class HealthTrajectoryWidget extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: AppMyColor.lightLavenderPinkColor.withOpacity(0.1),
+                  color: AppMyColor.lightLavenderPinkColor.withValues(alpha:0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(

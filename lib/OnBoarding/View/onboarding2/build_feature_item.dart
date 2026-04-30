@@ -20,7 +20,7 @@ class BuildFeatureItem extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF00D2FF).withOpacity(0.1),
+              color: const Color(0xFF00D2FF).withValues(alpha:0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(icon, color: const Color(0xFF00D2FF), size: 28),

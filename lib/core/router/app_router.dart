@@ -3,6 +3,7 @@ import 'package:diagnos_ai/screens/Authentication/LogIn/login_screen.dart';
 import 'package:diagnos_ai/screens/Authentication/SignUp/registration_screen.dart';
 import 'package:diagnos_ai/screens/HomeScreen/Home/home.dart';
 import 'package:diagnos_ai/screens/HomeScreen/Home/home_screen.dart';
+import 'package:diagnos_ai/screens/HomeScreen/report/report_screen.dart';
 import 'package:go_router/go_router.dart';
 
 
@@ -38,6 +39,11 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const Home(),
 
 
+    ),  GoRoute(
+      path: '/CBCReportScreen',
+      builder: (context, state) => const CBCReportScreen(),
+
+
     ),
 
     GoRoute(
@@ -53,29 +59,13 @@ final GoRouter appRouter = GoRouter(
       path: '/LabDashboardPage',
       builder: (context, state) => const OnboardingScreen(),
 
+    ), GoRoute(
+      path: '/CBCReportScreen',
+      builder: (context, state) => const CBCReportScreen(),
+
     ),
 
-    // GoRoute(
-    //   path: '/LabDashboardPage',
-    //   builder: (context, state) => const LabTrackingScreen(),
-    // ),
 
-
-
-    // GoRoute(
-    //   path: '/OnboardingTwoPage',
-    //   builder: (context, state) =>  ExpertCollaborationScreen(),
-    //   // builder: (context, state) => const OnboardingTwoPage(),
-    // ),
-    // GoRoute(
-    //   path: '/Onboarding3Screen',
-    //   builder: (context, state) =>  Onboarding3Screen(),
-    //   // builder: (context, state) => const OnboardingTwoPage(),
-    // ),  GoRoute(
-    //   path: '/Onboarding4Screen',
-    //   builder: (context, state) =>  Onboarding4Screen(),
-    //   // builder: (context, state) => const OnboardingTwoPage(),
-    // ),
 
 
 

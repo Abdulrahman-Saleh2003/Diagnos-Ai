@@ -27,7 +27,7 @@ class BuildAiBrainVisualization extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  AppMyColor.blueColor.withOpacity(0.25),
+                  AppMyColor.blueColor.withValues(alpha:0.25),
                   Colors.transparent,
                 ],
               ),
@@ -52,10 +52,10 @@ class BuildAiBrainVisualization extends StatelessWidget {
                 vertical: 14 * scale,
               ),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.75),
+                color: Colors.black.withValues(alpha:0.75),
                 borderRadius: BorderRadius.circular(16 * scale),
                 border: Border.all(
-                  color: AppMyColor.blueColor.withOpacity(0.4),
+                  color: AppMyColor.blueColor.withValues(alpha:0.4),
                   width: 1.5 * scale,
                 ),
               ),
